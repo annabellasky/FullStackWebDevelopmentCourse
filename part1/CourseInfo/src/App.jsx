@@ -5,11 +5,20 @@ const Header = (props) => {
 }
 
 const Content = (props) => {
+  const exerciseinfo = props.exerciseinfo
   return (
     <div>
-      <p>{props.exerciseinfo[0].name} {props.exerciseinfo[0].number}</p>
-      <p>{props.exerciseinfo[1].name} {props.exerciseinfo[1].number}</p>
-      <p>{props.exerciseinfo[2].name} {props.exerciseinfo[2].number}</p>
+      <Part name = {exerciseinfo[0].name} number = {exerciseinfo[0].number}/>
+      <Part name = {exerciseinfo[1].name} number = {exerciseinfo[1].number}/>
+      <Part name = {exerciseinfo[2].name} number = {exerciseinfo[2].number}/>
+    </div>
+  )
+}
+
+const Part = (props) => {
+  return (
+    <div>
+      <p>{props.name} {props.number}</p>
     </div>
   )
 }
